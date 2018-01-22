@@ -1,0 +1,35 @@
+# The following types define the data model of the example service
+# based on which the GraphQL API is generated
+
+type Chat @model{
+  id: ID! @isUnique
+  from: String!
+  content: String!
+  createdAt: DateTime!
+}
+
+# type User @model {
+#   id: ID! @isUnique
+#   name: String
+#   dateOfBirth: DateTime
+
+#   # Uncomment below - you can declare relations between models like this
+
+#   # posts: [Post!]! @relation(name: "UserPosts")
+# }
+
+
+# Uncomment the model below as well
+
+# type Post @model {
+#   id: ID! @isUnique
+#   title: String!
+#
+#   # Every relation also required a back-relation (to determine 1:1, 1:n or n:m)
+#   author: User! @relation(name: "UserPosts")
+# }
+
+
+#   Simple API:        https://api.graph.cool/simple/v1/cjcpgs3a401vd0101kf01hy6n
+#   Relay API:         https://api.graph.cool/relay/v1/cjcpgs3a401vd0101kf01hy6n
+#   Subscriptions API: wss://subscriptions.graph.cool/v1/cjcpgs3a401vd0101kf01hy6n
